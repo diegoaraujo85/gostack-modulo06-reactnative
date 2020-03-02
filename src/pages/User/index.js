@@ -45,7 +45,13 @@ export default class User extends Component {
     const { navigation } = this.props;
     const { stars } = this.state;
     const user = navigation.getParam('user');
-
+    /**
+     *
+     * a fazer:
+     * ao carregar os repositorios, mostrar um loading
+     * ao chegar no fim da lista carregar mais items, a lista tem uma funcao 'onEndReached', mudar as paginas na chamada da api
+     * ao clicar em um repositorio abrir uma webview carregando a pagina(react-native-community/react-native-webview)
+     */
     return (
       <Container>
         <Header>
