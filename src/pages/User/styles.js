@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
   flex: 1;
@@ -35,6 +36,7 @@ export const Stars = styled.FlatList.attrs({
   showsVerticalScrollIndicator: false,
 })`
   margin-top: 20px;
+  /*background: ${props => (props.loading ? '#999' : 'transparent')};*/
 `;
 export const Starred = styled.View`
   background: #f5f5f5;
@@ -65,4 +67,39 @@ export const Author = styled.Text`
   font-size: 13px;
   color: #666;
   margin-top: 2px;
+`;
+export const Page = styled.View`
+  flex: 1;
+  align-items: flex-end;
+  display: ${props => (props.loading ? 'none' : 'flex')};
+`;
+
+export const PageText = styled.Text`
+  font-size: 12px;
+  color: #666;
+  font-weight: bold;
+`;
+
+export const RepoButton = styled(RectButton)`
+  margin-top: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  background: #7159c1;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+`;
+
+export const RepoButtonText = styled.Text`
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+`;
+
+export const ActivityIndicator = styled.View`
+  flex: 1;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 `;
